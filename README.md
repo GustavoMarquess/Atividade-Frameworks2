@@ -1,6 +1,4 @@
-# software para visualização de produtos
-
-Um parágrafo da descrição do projeto vai aqui
+# Software para visualização de produtos
 
 ## 🚀 Atividade:
 
