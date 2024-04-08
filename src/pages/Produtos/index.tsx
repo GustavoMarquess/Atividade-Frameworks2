@@ -16,7 +16,7 @@ export function Produtos() {
   useEffect(() => {
     function getProducts() {
       //fetch("https://dummyjson.com/products")
-        fetch("https://dummyjson.com/products?limit=1000")
+        fetch("https://dummyjson.com/products?limit=300")
         .then((response) => response.json())
         .then((data) => {
           setProdutos(data.products);

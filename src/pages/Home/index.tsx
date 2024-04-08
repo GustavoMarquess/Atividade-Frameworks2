@@ -16,7 +16,7 @@ export function Home() {
   useEffect(() => {
     function getProducts() {
       //fetch("https://dummyjson.com/products?limit=3")
-      fetch('https://dummyjson.com/products/search?q=moto')
+      fetch('https://dummyjson.com/products/search?q=perfume')
         .then((response) => response.json())
         .then((data) => {
           setProdutos(data.products);
