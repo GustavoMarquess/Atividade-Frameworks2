@@ -3,11 +3,15 @@ import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../services/firebaseConnection";
 import "./styles.css";
+import {useContext} from "react";
+import { UserContext } from "../../context/usercontext";
+
 
 export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -23,7 +27,7 @@ export function Login() {
         navigate("/produtos", { replace: true });
       })
       .catch((error) => {
-        alert(`Erro ao fazer login\n\nErro:${error}`);
+        alert(`Usuario e Senha Invalidos\n\nErro:${error}`);
         console.log(error);
       });
   }
@@ -35,7 +39,7 @@ export function Login() {
           <h1>Usuário</h1>
        <input
             type="email"
-            placeholder="email@exemplo.com"
+            placeholder="seu melhor e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

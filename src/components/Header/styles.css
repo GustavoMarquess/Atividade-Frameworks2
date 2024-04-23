@@ -4,7 +4,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#481E14;
+  background-color: #333333;
 }
 
 header .logo {
@@ -12,10 +12,10 @@ header .logo {
   justify-content: center;
   align-items: center;
   gap: 4px;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: px;
+  font-size: 18px;
 }
 
 header nav {
@@ -24,13 +24,54 @@ header nav {
 }
 
 header nav .link {
-  color: #ffffff;
+  color: white;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.5s;
+  transition: color 0.3s ease;
 }
 
 header nav .link:hover {
-  color: #ffffff;
-  transition: all 0.5s;
+  color: #A2D9CE;
+}
+
+.user-cart-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-info p {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 32px; 
+  display: flex;
+  align-items: center; 
+}
+.login-button {
+  display: inline-block;
+  background: #A2D9CE;
+  color: #481E14;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.login-button:hover {
+  background: #96C8B2;
 }

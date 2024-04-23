@@ -4,9 +4,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   flex-direction: column;
-  background-color:#0C0C0C;
+  background-color: #333333; /* Cinza Escuro */
+  color: #FFFFFF; /* Branco */
 }
 
 footer .logo {
@@ -14,8 +14,13 @@ footer .logo {
   justify-content: center;
   align-items: center;
   gap: 4px;
-  color: #ffffff;
+  color: #FFFFFF; /* Branco */
   text-decoration: none;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px; /* Tamanho do texto ajustado para melhor visualização */
+}
+
+footer .logo:hover {
+  color: #00bcd4; /* Ciano para interações hover */
+  transition: color 0.3s ease; /* Suaviza a transição de cores */
 }

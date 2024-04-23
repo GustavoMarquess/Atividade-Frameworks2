@@ -38,7 +38,7 @@ export function Private({ children }: PrivateProps): JSX.Element {
   if (loading) {
     return (
       <main className="carregando">
-        <span>Carregando...</span>
+        <span>Validando...</span>
       </main>
     );
   }

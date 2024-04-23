@@ -8,9 +8,13 @@ export function Footer() {
   return (
     <footer>
       <Link to="/" className="logo">
-        <Package weight="fill" className="icon" />
-        <span>Produtos</span>
+            <div className="container">
+                <span>By Gugs Marques.</span>
+            </div>
       </Link>
+
+
+      
     </footer>
   );
 }
