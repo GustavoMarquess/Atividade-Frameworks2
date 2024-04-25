@@ -7,6 +7,7 @@ import { Login } from "./pages/Login";
 import { NotFound } from "./pages/NotFound";
 import { Private } from "./routes/Private";
 import { Favoritos } from "./pages/Favoritos";
+import { Carrinho } from "./pages/Carrinho";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/produtos",
         element: <Produtos />,
+      },
+      {
+        path:"/carrinho",
+        element:<Carrinho />
       },
       {
         path: "/favoritos",

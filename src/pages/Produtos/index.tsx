@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "../../components/Card";
 import "./styles.css";
+import { CarrinhoProvider } from "../../context/carrinhocontext";
 
 interface ProdutoProps {
   id: string;
@@ -29,7 +30,7 @@ export function Produtos() {
   }, []);
 
   return (
-    <>
+    <CarrinhoProvider>
       <div className="bannerProdutos">
         <h1>Produtos</h1>
       </div>
@@ -48,6 +49,6 @@ export function Produtos() {
           ))}
         </div>
       </main>
-    </>
+      </CarrinhoProvider>
   );
 }

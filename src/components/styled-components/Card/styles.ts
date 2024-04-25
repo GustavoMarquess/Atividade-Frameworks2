@@ -101,6 +101,15 @@ const CardButtonFavorito = styled.button`
   font-size: 14px;
   cursor: pointer;
 `;
+const CardButtonRemove  = styled.button`
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #9B3922;
+height: fit-content;
+padding: 8px;
+color: #ffffff;
+`;
 
 export {
   CardContainer,
@@ -114,4 +123,5 @@ export {
   CardFooter,
   CardButton,
   CardButtonFavorito,
+  CardButtonRemove,
 };

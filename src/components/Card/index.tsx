@@ -14,6 +14,8 @@ import {
   CardButtonFavorito,
 } from "../styled-components/Card/styles";
 import { Heart, ShoppingCartSimple } from "@phosphor-icons/react";
+import { CarrinhoContext } from "../../context/carrinhocontext";
+import { useContext } from "react";
 
 interface CardProps {
   imageUrl: string;
@@ -30,6 +32,18 @@ const Card: React.FC<CardProps> = ({
   price,
   buttonUrl,
 }) => {
+
+  const { addItemCarrinho } = useContext(CarrinhoContext);
+
+  function handleAddToCart() {
+    const newItem = {
+      img: imageUrl,
+      title: title,
+      price: price,
+    };
+    addItemCarrinho(newItem);
+  }
+
   function handleBookmark() {
     addDoc(collection(db, "bookmarks"), {
       Produto: title,
@@ -44,6 +58,7 @@ const Card: React.FC<CardProps> = ({
         alert(`Erro ao favoritar: ${error}`);
       });
   }
+
 
   return (
     <CardContainer>

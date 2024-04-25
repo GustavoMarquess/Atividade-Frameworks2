@@ -1,23 +1,20 @@
 import {
     CardContainer,
-    CardImage,
     CardPhoto,
     CardBody,
-    CardHeader,
     CardTitle,
     CardPrice,
     CardDescription,
-    CardFooter,
-    CardButton,
-    CardButtonFavorito,
+    CardImage,
+
+    CardButtonRemove,
   } from "../styled-components/Card/styles";
   
   import { Heart, ShoppingCartSimple } from "@phosphor-icons/react";
-  
   import { Trash } from '@phosphor-icons/react';
   import { CarrinhoContext } from '../../context/carrinhocontext.tsx';
   import { useContext } from 'react';
-  import './styles.css';
+  //import './styles.css';
   
   interface CarrinhoItem {
     imageUrl: string;
@@ -27,26 +24,26 @@ import {
   }
   
   export function Cart() {
-    const { CarrinhoItem, removeItemCart, totalItems } = useContext(CartContext);
+    const { carrinhoItem, removeItemDoCarrinho, totalItems } = useContext(CarrinhoContext);
   
-    function handleRemoveItem(item: CartItem) {
-      removeItemCart(item);
+    function handleRemoveItem(item: CarrinhoItem) {
+      removeItemDoCarrinho(item);
     }
   
     return (
       <>
         <div className="itemsCarrinho">
-          {cartItems.map((item, index) => (
-            <CartContainer key={index}>
-              <CartImage src={item.img} />
-              <CartBody>
-                <CartTitle>{item.title}</CartTitle>
-                <CartPrice>$ {item.price}</CartPrice>
-              </CartBody>
-              <CartButtonRemove onClick={() => handleRemoveItem(item)}>
+          {carrinhoItem.map((item, index) => (
+            <CardContainer key={index}>
+              <CardPhoto src={item.img} />
+              <CardBody>
+                <CardTitle>{item.title}</CardTitle>
+                <CardPrice>$ {item.price}</CardPrice>
+              </CardBody>
+              <CardButtonRemove onClick={() => handleRemoveItem(item)}>
                 <Trash size={16} weight="fill" />
-              </CartButtonRemove>
-            </CartContainer>
+              </CardButtonRemove>
+            </CardContainer>
           ))}
         </div>
         <h6 className='totalItems'>Total de Itens: {totalItems}</h6>
