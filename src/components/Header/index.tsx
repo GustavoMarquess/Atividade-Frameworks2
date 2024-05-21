@@ -17,14 +17,16 @@ export function Header() {
         <Link to="/produtos" className="link">Produtos</Link>
         <Link to="/favoritos" className="link">Favoritos</Link>
       </nav>
-      <div className="user-info">
-        <p><strong>Logado como: {nome}</strong></p>
-        <p>{email}</p>
-        <Link to="/login" className="login-button">Login</Link>
+      <div className="user-cart-info">
+        <div className="user-info">
+          <p><strong>Logado como: {nome}</strong></p>
+          <p>{email}</p>
+          <Link to="/login" className="login-button">Login</Link>
+        </div>
+        <Link to="/carrinho" className="cart-button">
+          <ShoppingCart weight="bold" />
+        </Link>
       </div>
-      <Link to="/carrinho" className="cart-button">
-        <ShoppingCart weight="bold" />
-      </Link>
     </header>
   );
 }
