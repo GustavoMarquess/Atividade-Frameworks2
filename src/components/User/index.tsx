@@ -8,23 +8,23 @@ export default function User() {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   
-  
   return (
     <form className="Flogin">
       <input
         type="text"
+        placeholder="Nome"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
       />
       <input
         type="email"
-        placeholder={email}
+        placeholder={email || "Email"}
         value={userEmail}
         onChange={(e) => setUserEmail(e.target.value)}
       />
       <input
         type="password"
-        placeholder={senha}
+        placeholder={senha || "Senha"}
         value={userPassword}
         onChange={(e) => setUserPassword(e.target.value)}
       />
